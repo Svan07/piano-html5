@@ -8,9 +8,9 @@
             <defs></defs>
                 <g id="piano-keyboard">
                     <g id="octave-1">
-                        <rect id="octave-1-C-key" class="piano-key white-key" data-piano-key="C" stroke="#555555" fill="#FFFFF7" x="0" y="0" width="80" height="400"></rect>
-                        <rect id="octave-1-D-key" class="piano-key white-key" data-piano-key="D" stroke="#555555" fill="#FFFFF7" x="80" y="0" width="80" height="400"></rect>
-                        <rect id="octave-1-E-key" class="piano-key white-key" data-piano-key="E" stroke="#555555" fill="#FFFFF7" x="160" y="0" width="80" height="400"></rect>
+                        <rect id="octave-1-C-key" class="piano-key white-key" data-piano-key="C" stroke="#555555" fill="#FFFFF7" x="0" y="0" width="80" height="400" onclick="musicmaestro(this.id)"></rect>
+                        <rect id="octave-1-D-key" class="piano-key white-key" data-piano-key="D" stroke="#555555" fill="#FFFFF7" x="80" y="0" width="80" height="400" onclick="musicmaestro(this.id)"></rect>
+                        <rect id="octave-1-E-key" class="piano-key white-key" data-piano-key="E" stroke="#555555" fill="#FFFFF7" x="160" y="0" width="80" height="400" onclick="musicmaestro(this.id)"></rect>
                         <rect id="octave-1-F-key" class="piano-key white-key" data-piano-key="F" stroke="#555555" fill="#FFFFF7" x="240" y="0" width="80" height="400"></rect>
                         <rect id="octave-1-G-key" class="piano-key white-key" data-piano-key="G" stroke="#555555" fill="#FFFFF7" x="320" y="0" width="80" height="400"></rect>
                         <rect id="octave-1-A-key" class="piano-key white-key" data-piano-key="A" stroke="#555555" fill="#FFFFF7" x="400" y="0" width="80" height="400"></rect>
@@ -38,5 +38,15 @@
                 </g>
         </svg>
 
+        <script type="text/javascript" src="../howler.js-master/dist/howler.js"></script>
+        <script>
+            function musicmaestro(id) {
+                var soundname=id.concat(".mp3");
+                var sound = new Howl({                    
+                    src: [soundname]
+                  });                  
+                sound.play();             
+            }
+        </script>
     </body>
 </html>
