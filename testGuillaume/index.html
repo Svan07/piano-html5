@@ -69,10 +69,20 @@
                         </g>
                     </g>
             </svg>
-        </div>        
+        </div>
+        <div id="volume">
+                <input class="slider" id="vol-control" type="range" min="0" max="100" step="1" oninput="SetVolume(this.value)"></input>
+        </div>
+        
 
         <script type="text/javascript" src="../howler.js-master/dist/howler.js"></script>
         <script>
+            var volumevalue=1;
+
+            function SetVolume(value){                                
+                volumevalue = value / 100;                
+            }
+
             function musicmaestro(elem,valuediese) {
                 var soundname="../testGuillaume/sons/".concat(elem.id,".mp3");
                 var sound = new Howl({                    
@@ -84,10 +94,10 @@
                   if(valuediese=='nd'){
                     document.getElementById(elem.id).setAttribute("fill","#edede6"); 
                   }  
+                Howler.volume(volumevalue);
                 sound.play();             
             }
-        </script>
-        <script>
+        
             function changecolor(elem,valuediese)
             {
                 if(valuediese=='d'){
@@ -97,8 +107,7 @@
                     document.getElementById(elem.id).setAttribute("fill","#FFFFF7"); 
                   }
             }
-        </script>
-        <script>            
+                    
             function searchKeyDown(e)
             {                      
                 e = e || window.event;
@@ -166,7 +175,8 @@
                 }
                 return true;
                        
-            }        
+            }     
+
             function searchKeyUp(e)
             {   
                 e = e || window.event;
