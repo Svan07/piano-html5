@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr" onkeydown="return searchKeyDown(event)" onkeyup="return searchKeyUp(event)">
     <head>
-        <meta charset="UTF-8">    
+        <meta charset="UTF-8"> 
+        <title>Maestro Piano</title>   
         <link rel="stylesheet" type="text/css" href="../testGuillaume/css/style.css">
+        <link rel="icon" type="image/ico" href="../testGuillaume/pictures/piano.ico" />
+
     </head>
     <body>        
         <div id="pianosvg">
@@ -67,20 +70,70 @@
                             <rect id="G4d" class="piano-key black-key" data-piano-key="G#" stroke="#979797" fill="#4B4B4B" x="380" y="0" width="40" height="280" onmousedown="musicmaestro(this,'d')" onmouseup="changecolor(this,'d')"></rect>
                             <rect id="A4d" class="piano-key black-key" data-piano-key="A#" stroke="#979797" fill="#4B4B4B" x="460" y="0" width="40" height="280" onmousedown="musicmaestro(this,'d')" onmouseup="changecolor(this,'d')"></rect>
                         </g>
-                    </g>
-            </svg>
+                        <rect id="selection" class="selection" fill="#4B4B4B" fill-opacity="0.1" pointer-events="none" x="0" y="0" width="560" height="400"></rect>
+                    </g>                    
+            </svg>            
         </div>
+
+        <div id="boutons">
+            <button class="boutons" onmouseup="clickgauche();">gauche</button>
+            <button class="boutons" onmouseup="clickdroit();">droite</button>
+        </div>
+        
         <div id="volume">
-                <input class="slider" id="vol-control" type="range" min="0" max="100" step="1" oninput="SetVolume(this.value)"></input>
+                <input class="slider" id="vol-control" type="range" min="0" max="100" value="50" step="1" oninput="SetVolume(this.value)"></input>
         </div>
         
 
         <script type="text/javascript" src="../howler.js-master/dist/howler.js"></script>
         <script>
-            var volumevalue=1;
+            var volumevalue=0.5;
+            var selectionposition=1;
 
             function SetVolume(value){                                
                 volumevalue = value / 100;                
+            }
+
+            function clickgauche(){
+                if(selectionposition==1){
+                    return false;
+                }
+                else if(selectionposition==2){
+                    document.getElementById('selection').setAttribute("x","0");
+                    selectionposition=1;
+                    return false;
+                }
+                else if(selectionposition==3){
+                    document.getElementById('selection').setAttribute("x","560");
+                    selectionposition=2;
+                    return false;
+                }
+                else if(selectionposition==4){
+                    document.getElementById('selection').setAttribute("x","1120");
+                    selectionposition=3;
+                    return false;
+                }
+            }
+
+            function clickdroit(){
+                if(selectionposition==4){
+                    return false;
+                }
+                else if(selectionposition==3){
+                    document.getElementById('selection').setAttribute("x","1680");
+                    selectionposition=4;
+                    return false;
+                }
+                else if(selectionposition==2){
+                    document.getElementById('selection').setAttribute("x","1120");
+                    selectionposition=3;
+                    return false;
+                }
+                else if(selectionposition==1){
+                    document.getElementById('selection').setAttribute("x","560");
+                    selectionposition=2;
+                    return false;
+                }
             }
 
             function musicmaestro(elem,valuediese) {
@@ -114,7 +167,7 @@
                 switch(e.keyCode){
                     case 81:
                     case 113:
-                        document.getElementById('C1').onmousedown();
+                        document.getElementById('C1').onmousedown();                        
                         return false;
                         break;
                     case 83:
@@ -157,8 +210,7 @@
                         document.getElementById('D1d').onmousedown();
                         return false;
                         break;
-                    case 84:
-                    case 116:
+                    case 84:                    
                         document.getElementById('F1d').onmousedown();
                         return false;
                         break;
@@ -171,7 +223,7 @@
                     case 117:
                         document.getElementById('A1d').onmousedown();
                         return false;
-                        break;
+                        break;  
                 }
                 return true;
                        
@@ -182,65 +234,64 @@
                 e = e || window.event;
                 switch(e.keyCode){
                     case 81:
-                        case 113:
-                            document.getElementById('C1').onmouseup();
-                            return false;
-                            break;
-                        case 83:
-                        case 115:
-                            document.getElementById('D1').onmouseup();
-                            return false;
-                            break;
-                        case 68:
-                        case 100:
-                            document.getElementById('E1').onmouseup();
-                            return false;
-                            break;
-                        case 70:
-                        case 102:
-                            document.getElementById('F1').onmouseup();
-                            return false;
-                            break;
-                        case 71:
-                        case 103:
-                            document.getElementById('G1').onmouseup();
-                            return false;
-                            break;
-                        case 72:
-                        case 104:
-                            document.getElementById('A1').onmouseup();
-                            return false;
-                            break;
-                        case 74:
-                        case 106:
-                            document.getElementById('B1').onmouseup();
-                            return false;
-                            break;
-                        case 90:
-                        case 122:
-                            document.getElementById('C1d').onmouseup();
-                            return false;
-                            break;
-                        case 69:
-                        case 101:
-                            document.getElementById('D1d').onmouseup();
-                            return false;
-                            break;
-                        case 84:
-                        case 116:
-                            document.getElementById('F1d').onmouseup();
-                            return false;
-                            break;
-                        case 89:
-                        case 121:
-                            document.getElementById('G1d').onmouseup();
-                            return false;
-                            break;
-                        case 85:
-                        case 117:
-                            document.getElementById('A1d').onmouseup();
-                            return false;
-                            break;
+                    case 113:
+                        document.getElementById('C1').onmouseup();
+                        return false;
+                        break;
+                    case 83:
+                    case 115:
+                        document.getElementById('D1').onmouseup();
+                        return false;
+                        break;
+                    case 68:
+                    case 100:
+                        document.getElementById('E1').onmouseup();
+                        return false;
+                        break;
+                    case 70:
+                    case 102:
+                        document.getElementById('F1').onmouseup();
+                        return false;
+                        break;
+                    case 71:
+                    case 103:
+                        document.getElementById('G1').onmouseup();
+                        return false;
+                        break;
+                    case 72:
+                    case 104:
+                        document.getElementById('A1').onmouseup();
+                        return false;
+                        break;
+                    case 74:
+                    case 106:
+                        document.getElementById('B1').onmouseup();
+                        return false;
+                        break;
+                    case 90:
+                    case 122:
+                        document.getElementById('C1d').onmouseup();
+                        return false;
+                        break;
+                    case 69:
+                    case 101:
+                        document.getElementById('D1d').onmouseup();
+                        return false;
+                        break;
+                    case 84:
+                        document.getElementById('F1d').onmouseup();
+                        return false;
+                        break;
+                    case 89:
+                    case 121:
+                        document.getElementById('G1d').onmouseup();
+                        return false;
+                        break;
+                    case 85:
+                    case 117:
+                        document.getElementById('A1d').onmouseup();
+                        return false;
+                        break;
                 }
                 return true;
             }
