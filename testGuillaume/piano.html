@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="fr" onkeydown="return searchKeyDown(event)" onkeyup="return searchKeyUp(event)">
+    <head>
+        <meta charset="UTF-8"> 
+        <title>Maestro Piano</title>   
+        <link rel="stylesheet" type="text/css" href="../testGuillaume/css/style.css">
+        <link rel="icon" type="image/ico" href="../testGuillaume/pictures/piano.ico" />
+
+    </head>
+    <body>        
+        <div id="pianosvg">
+            <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+            <svg width="90%" viewBox="0 0 2240 400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <title>Piano Keyboard</title>
+                <defs></defs>
+                    <g id="piano-keyboard">
+                        <g id="octave-1">
+                            <rect id="C1" class="piano-key white-key" data-piano-key="C" stroke="#555555" fill="#FFFFF7" x="0" y="0" width="80" height="400" onmousedown="musicmaestro(this,'nd')" onmouseup="changecolor(this,'nd')"></rect>
+                            <rect id="D1" class="piano-key white-key" data-piano-key="D" stroke="#555555" fill="#FFFFF7" x="80" y="0" width="80" height="400" onmousedown="musicmaestro(this,'nd')" onmouseup="changecolor(this,'nd')"></rect>
+                            <rect id="E1" class="piano-key white-key" data-piano-key="E" stroke="#555555" fill="#FFFFF7" x="160" y="0" width="80" height="400" onmousedown="musicmaestro(this,'nd')" onmouseup="changecolor(this,'nd')"></rect>
+                            <rect id="F1" class="piano-key white-key" data-piano-key="F" stroke="#555555" fill="#FFFFF7" x="240" y="0" width="80" height="400" onmousedown="musicmaestro(this,'nd')" onmouseup="changecolor(this,'nd')"></rect>
+                            <rect id="G1" class="piano-key white-key" data-piano-key="G" stroke="#555555" fill="#FFFFF7" x="320" y="0" width="80" height="400" onmousedown="musicmaestro(this,'nd')" onmouseup="changecolor(this,'nd')"></rect>
+                            <rect id="A1" class="piano-key white-key" data-piano-key="A" stroke="#555555" fill="#FFFFF7" x="400" y="0" width="80" height="400" onmousedown="musicmaestro(this,'nd')" onmouseup="changecolor(this,'nd')"></rect>
+                            <rect id="B1" class="piano-key white-key" data-piano-key="B" stroke="#555555" fill="#FFFFF7" x="480" y="0" width="80" height="400" onmousedown="musicmaestro(this,'nd')" onmouseup="changecolor(this,'nd')"></rect>
+                            <rect id="Cd1" class="piano-key black-key" data-piano-key="C#" stroke="#979797" fill="#4B4B4B" x="60" y="0" width="40" height="280" onmousedown="musicmaestro(this,'d')" onmouseup="changecolor(this,'d')"></rect>
+                            <rect id="Dd1" class="piano-key black-key" data-piano-key="D#" stroke="#979797" fill="#4B4B4B" x="140" y="0" width="40" height="280" onmousedown="musicmaestro(this,'d')" onmouseup="changecolor(this,'d')"></rect>
+                            <rect id="Fd1" class="piano-key black-key" data-piano-key="F#" stroke="#979797" fill="#4B4B4B" x="300" y="0" width="40" height="280" onmousedown="musicmaestro(this,'d')" onmouseup="changecolor(this,'d')"></rect>
+                            <rect id="Gd1" class="piano-key black-key" data-piano-key="G#" stroke="#979797" fill="#4B4B4B" x="380" y="0" width="40" height="280" onmousedown="musicmaestro(this,'d')" onmouseup="changecolor(this,'d')"></rect>
+                            <rect id="Ad1" class="piano-key black-key" data-piano-key="A#" stroke="#979797" fill="#4B4B4B" x="460" y="0" width="40" height="280" onmousedown="musicmaestro(this,'d')" onmouseup="changecolor(this,'d')"></rect>
+                        </g>
+                        <g id="octave-2" transform="translate(560.000000, 0.000000)">
+                            <rect id="C2" class="piano-key white-key" data-piano-key="C" stroke="#555555" fill="#FFFFF7" x="0" y="0" width="80" height="400" onmousedown="musicmaestro(this,'nd')" onmouseup="changecolor(this,'nd')"></rect>
+                            <rect id="D2" class="piano-key white-key" data-piano-key="D" stroke="#555555" fill="#FFFFF7" x="80" y="0" width="80" height="400" onmousedown="musicmaestro(this,'nd')" onmouseup="changecolor(this,'nd')"></rect>
+                            <rect id="E2" class="piano-key white-key" data-piano-key="E" stroke="#555555" fill="#FFFFF7" x="160" y="0" width="80" height="400" onmousedown="musicmaestro(this,'nd')" onmouseup="changecolor(this,'nd')"></rect>
+                            <rect id="F2" class="piano-key white-key" data-piano-key="F" stroke="#555555" fill="#FFFFF7" x="240" y="0" width="80" height="400" onmousedown="musicmaestro(this,'nd')" onmouseup="changecolor(this,'nd')"></rect>
+                            <rect id="G2" class="piano-key white-key" data-piano-key="G" stroke="#555555" fill="#FFFFF7" x="320" y="0" width="80" height="400" onmousedown="musicmaestro(this,'nd')" onmouseup="changecolor(this,'nd')"></rect>
+                            <rect id="A2" class="piano-key white-key" data-piano-key="A" stroke="#555555" fill="#FFFFF7" x="400" y="0" width="80" height="400" onmousedown="musicmaestro(this,'nd')" onmouseup="changecolor(this,'nd')"></rect>
+                            <rect id="B2" class="piano-key white-key" data-piano-key="B" stroke="#555555" fill="#FFFFF7" x="480" y="0" width="80" height="400" onmousedown="musicmaestro(this,'nd')" onmouseup="changecolor(this,'nd')"></rect>
+                            <rect id="Cd2" class="piano-key black-key" data-piano-key="C#" stroke="#979797" fill="#4B4B4B" x="60" y="0" width="40" height="280" onmousedown="musicmaestro(this,'d')" onmouseup="changecolor(this,'d')"></rect>
+                            <rect id="Dd2" class="piano-key black-key" data-piano-key="D#" stroke="#979797" fill="#4B4B4B" x="140" y="0" width="40" height="280" onmousedown="musicmaestro(this,'d')" onmouseup="changecolor(this,'d')"></rect>
+                            <rect id="Fd2" class="piano-key black-key" data-piano-key="F#" stroke="#979797" fill="#4B4B4B" x="300" y="0" width="40" height="280" onmousedown="musicmaestro(this,'d')" onmouseup="changecolor(this,'d')"></rect>
+                            <rect id="Gd2" class="piano-key black-key" data-piano-key="G#" stroke="#979797" fill="#4B4B4B" x="380" y="0" width="40" height="280" onmousedown="musicmaestro(this,'d')" onmouseup="changecolor(this,'d')"></rect>
+                            <rect id="Ad2" class="piano-key black-key" data-piano-key="A#" stroke="#979797" fill="#4B4B4B" x="460" y="0" width="40" height="280" onmousedown="musicmaestro(this,'d')" onmouseup="changecolor(this,'d')"></rect>
+                        </g>
+                        <g id="octave-3" transform="translate(1120.000000, 0.000000)">
+                            <rect id="C3" class="piano-key white-key" data-piano-key="C" stroke="#555555" fill="#FFFFF7" x="0" y="0" width="80" height="400" onmousedown="musicmaestro(this,'nd')" onmouseup="changecolor(this,'nd')"></rect>
+                            <rect id="D3" class="piano-key white-key" data-piano-key="D" stroke="#555555" fill="#FFFFF7" x="80" y="0" width="80" height="400" onmousedown="musicmaestro(this,'nd')" onmouseup="changecolor(this,'nd')"></rect>
+                            <rect id="E3" class="piano-key white-key" data-piano-key="E" stroke="#555555" fill="#FFFFF7" x="160" y="0" width="80" height="400" onmousedown="musicmaestro(this,'nd')" onmouseup="changecolor(this,'nd')"></rect>
+                            <rect id="F3" class="piano-key white-key" data-piano-key="F" stroke="#555555" fill="#FFFFF7" x="240" y="0" width="80" height="400" onmousedown="musicmaestro(this,'nd')" onmouseup="changecolor(this,'nd')"></rect>
+                            <rect id="G3" class="piano-key white-key" data-piano-key="G" stroke="#555555" fill="#FFFFF7" x="320" y="0" width="80" height="400" onmousedown="musicmaestro(this,'nd')" onmouseup="changecolor(this,'nd')"></rect>
+                            <rect id="A3" class="piano-key white-key" data-piano-key="A" stroke="#555555" fill="#FFFFF7" x="400" y="0" width="80" height="400" onmousedown="musicmaestro(this,'nd')" onmouseup="changecolor(this,'nd')"></rect>
+                            <rect id="B3" class="piano-key white-key" data-piano-key="B" stroke="#555555" fill="#FFFFF7" x="480" y="0" width="80" height="400" onmousedown="musicmaestro(this,'nd')" onmouseup="changecolor(this,'nd')"></rect>
+                            <rect id="Cd3" class="piano-key black-key" data-piano-key="C#" stroke="#979797" fill="#4B4B4B" x="60" y="0" width="40" height="280" onmousedown="musicmaestro(this,'d')" onmouseup="changecolor(this,'d')"></rect>
+                            <rect id="Dd3" class="piano-key black-key" data-piano-key="D#" stroke="#979797" fill="#4B4B4B" x="140" y="0" width="40" height="280" onmousedown="musicmaestro(this,'d')" onmouseup="changecolor(this,'d')"></rect>
+                            <rect id="Fd3" class="piano-key black-key" data-piano-key="F#" stroke="#979797" fill="#4B4B4B" x="300" y="0" width="40" height="280" onmousedown="musicmaestro(this,'d')" onmouseup="changecolor(this,'d')"></rect>
+                            <rect id="Gd3" class="piano-key black-key" data-piano-key="G#" stroke="#979797" fill="#4B4B4B" x="380" y="0" width="40" height="280" onmousedown="musicmaestro(this,'d')" onmouseup="changecolor(this,'d')"></rect>
+                            <rect id="Ad3" class="piano-key black-key" data-piano-key="A#" stroke="#979797" fill="#4B4B4B" x="460" y="0" width="40" height="280" onmousedown="musicmaestro(this,'d')" onmouseup="changecolor(this,'d')"></rect>
+                        </g>
+                        <g id="octave-4" transform="translate(1680.000000, 0.000000)">
+                            <rect id="C4" class="piano-key white-key" data-piano-key="C" stroke="#555555" fill="#FFFFF7" x="0" y="0" width="80" height="400" onmousedown="musicmaestro(this,'nd')" onmouseup="changecolor(this,'nd')"></rect>
+                            <rect id="D4" class="piano-key white-key" data-piano-key="D" stroke="#555555" fill="#FFFFF7" x="80" y="0" width="80" height="400" onmousedown="musicmaestro(this,'nd')" onmouseup="changecolor(this,'nd')"></rect>
+                            <rect id="E4" class="piano-key white-key" data-piano-key="E" stroke="#555555" fill="#FFFFF7" x="160" y="0" width="80" height="400" onmousedown="musicmaestro(this,'nd')" onmouseup="changecolor(this,'nd')"></rect>
+                            <rect id="F4" class="piano-key white-key" data-piano-key="F" stroke="#555555" fill="#FFFFF7" x="240" y="0" width="80" height="400" onmousedown="musicmaestro(this,'nd')" onmouseup="changecolor(this,'nd')"></rect>
+                            <rect id="G4" class="piano-key white-key" data-piano-key="G" stroke="#555555" fill="#FFFFF7" x="320" y="0" width="80" height="400" onmousedown="musicmaestro(this,'nd')" onmouseup="changecolor(this,'nd')"></rect>
+                            <rect id="A4" class="piano-key white-key" data-piano-key="A" stroke="#555555" fill="#FFFFF7" x="400" y="0" width="80" height="400" onmousedown="musicmaestro(this,'nd')" onmouseup="changecolor(this,'nd')"></rect>
+                            <rect id="B4" class="piano-key white-key" data-piano-key="B" stroke="#555555" fill="#FFFFF7" x="480" y="0" width="80" height="400" onmousedown="musicmaestro(this,'nd')" onmouseup="changecolor(this,'nd')"></rect>
+                            <rect id="Cd4" class="piano-key black-key" data-piano-key="C#" stroke="#979797" fill="#4B4B4B" x="60" y="0" width="40" height="280" onmousedown="musicmaestro(this,'d')" onmouseup="changecolor(this,'d')"></rect>
+                            <rect id="Dd4" class="piano-key black-key" data-piano-key="D#" stroke="#979797" fill="#4B4B4B" x="140" y="0" width="40" height="280" onmousedown="musicmaestro(this,'d')" onmouseup="changecolor(this,'d')"></rect>
+                            <rect id="Fd4" class="piano-key black-key" data-piano-key="F#" stroke="#979797" fill="#4B4B4B" x="300" y="0" width="40" height="280" onmousedown="musicmaestro(this,'d')" onmouseup="changecolor(this,'d')"></rect>
+                            <rect id="Gd4" class="piano-key black-key" data-piano-key="G#" stroke="#979797" fill="#4B4B4B" x="380" y="0" width="40" height="280" onmousedown="musicmaestro(this,'d')" onmouseup="changecolor(this,'d')"></rect>
+                            <rect id="Ad4" class="piano-key black-key" data-piano-key="A#" stroke="#979797" fill="#4B4B4B" x="460" y="0" width="40" height="280" onmousedown="musicmaestro(this,'d')" onmouseup="changecolor(this,'d')"></rect>
+                        </g>
+                        <rect id="selection" class="selection" fill="#3c708f" fill-opacity="0.3" pointer-events="none" x="0" y="0" rx="10px" ry="10px" width="560" height="30"></rect>
+                    </g>                    
+            </svg>            
+        </div>
+
+        <div id="boutons">
+            <button class="boutons" onmouseup="clickgauche();">gauche</button>
+            <button class="boutons" onmouseup="clickdroit();">droite</button>
+        </div>
+        
+        <div id="volume">
+                <input class="slider" id="vol-control" type="range" min="0" max="100" value="50" step="1" oninput="SetVolume(this.value)"></input>
+        </div>
+        
+
+        <script type="text/javascript" src="../howler.js-master/dist/howler.js"></script>
+        <script>
+            var volumevalue=0.5;
+            var selectionposition=1;
+            var notesbase=["C","D","E","F","G","A","B","Cd","Dd","Fd","Gd","Ad"];
+            var currentnotes=["C1","D1","E1","F1","G1","A1","B1","Cd1","Dd1","Fd1","Gd1","Ad1"];
+
+            function SetVolume(value){                                
+                volumevalue = value / 100;                
+            }
+
+            function clickgauche(){
+                if(selectionposition==1){
+                    return false;
+                }
+                else if(selectionposition==2){
+                    document.getElementById('selection').setAttribute("x","0");
+                    for (let index = 0; index < notesbase.length; index++) {
+                        currentnotes[index]=notesbase[index].concat("1");                        
+                    }
+                    selectionposition=1;
+                    return false;
+                }
+                else if(selectionposition==3){
+                    document.getElementById('selection').setAttribute("x","560");
+                    for (let index = 0; index < notesbase.length; index++) {
+                        currentnotes[index]=notesbase[index].concat("2");                        
+                    }
+                    selectionposition=2;
+                    return false;
+                }
+                else if(selectionposition==4){
+                    document.getElementById('selection').setAttribute("x","1120");
+                    for (let index = 0; index < notesbase.length; index++) {
+                        currentnotes[index]=notesbase[index].concat("3");                        
+                    }
+                    selectionposition=3;
+                    return false;
+                }
+            }
+
+            function clickdroit(){
+                if(selectionposition==4){
+                    return false;
+                }
+                else if(selectionposition==3){
+                    document.getElementById('selection').setAttribute("x","1680");
+                    for (let index = 0; index < notesbase.length; index++) {
+                        currentnotes[index]=notesbase[index].concat("4");                        
+                    }
+                    selectionposition=4;
+                    return false;
+                }
+                else if(selectionposition==2){
+                    document.getElementById('selection').setAttribute("x","1120");
+                    for (let index = 0; index < notesbase.length; index++) {
+                        currentnotes[index]=notesbase[index].concat("3");                        
+                    }
+                    selectionposition=3;
+                    return false;
+                }
+                else if(selectionposition==1){
+                    document.getElementById('selection').setAttribute("x","560");
+                    for (let index = 0; index < notesbase.length; index++) {
+                        currentnotes[index]=notesbase[index].concat("2");                        
+                    }
+                    selectionposition=2;
+                    return false;
+                }
+            }
+
+            function musicmaestro(elem,valuediese) {
+                var soundname="../testGuillaume/sons/".concat(elem.id,".mp3");
+                var sound = new Howl({                    
+                    src: [soundname]
+                  });
+                  if(valuediese=='d'){
+                    document.getElementById(elem.id).setAttribute("fill","#2d2d2d");
+                  } 
+                  if(valuediese=='nd'){
+                    document.getElementById(elem.id).setAttribute("fill","#e8e8da"); 
+                  }  
+                Howler.volume(volumevalue);
+                sound.play();             
+            }
+        
+            function changecolor(elem,valuediese)
+            {
+                if(valuediese=='d'){
+                    document.getElementById(elem.id).setAttribute("fill","#4B4B4B"); 
+                  } 
+                  if(valuediese=='nd'){
+                    document.getElementById(elem.id).setAttribute("fill","#FFFFF7"); 
+                  }
+            }
+                    
+            function searchKeyDown(e)
+            {                      
+                e = e || window.event;
+                switch(e.keyCode){
+                    case 81:
+                    case 113:
+                        document.getElementById(currentnotes[0]).onmousedown();                        
+                        return false;
+                        break;
+                    case 83:
+                    case 115:
+                        document.getElementById(currentnotes[1]).onmousedown();
+                        return false;
+                        break;
+                    case 68:
+                    case 100:
+                        document.getElementById(currentnotes[2]).onmousedown();
+                        return false;
+                        break;
+                    case 70:
+                    case 102:
+                        document.getElementById(currentnotes[3]).onmousedown();
+                        return false;
+                        break;
+                    case 71:
+                    case 103:
+                        document.getElementById(currentnotes[4]).onmousedown();
+                        return false;
+                        break;
+                    case 72:
+                    case 104:
+                        document.getElementById(currentnotes[5]).onmousedown();
+                        return false;
+                        break;
+                    case 74:
+                    case 106:
+                        document.getElementById(currentnotes[6]).onmousedown();
+                        return false;
+                        break;
+                    case 90:
+                    case 122:
+                        document.getElementById(currentnotes[7]).onmousedown();
+                        return false;
+                        break;
+                    case 69:
+                    case 101:
+                        document.getElementById(currentnotes[8]).onmousedown();
+                        return false;
+                        break;
+                    case 84:                    
+                        document.getElementById(currentnotes[9]).onmousedown();
+                        return false;
+                        break;
+                    case 89:
+                    case 121:
+                        document.getElementById(currentnotes[10]).onmousedown();
+                        return false;
+                        break;
+                    case 85:
+                    case 117:
+                        document.getElementById(currentnotes[11]).onmousedown();
+                        return false;
+                        break;  
+                }
+                return true;
+                       
+            }     
+
+            function searchKeyUp(e)
+            {   
+                e = e || window.event;
+                switch(e.keyCode){
+                    case 81:
+                    case 113:
+                        document.getElementById(currentnotes[0]).onmouseup();
+                        return false;
+                        break;
+                    case 83:
+                    case 115:
+                        document.getElementById(currentnotes[1]).onmouseup();
+                        return false;
+                        break;
+                    case 68:
+                    case 100:
+                        document.getElementById(currentnotes[2]).onmouseup();
+                        return false;
+                        break;
+                    case 70:
+                    case 102:
+                        document.getElementById(currentnotes[3]).onmouseup();
+                        return false;
+                        break;
+                    case 71:
+                    case 103:
+                        document.getElementById(currentnotes[4]).onmouseup();
+                        return false;
+                        break;
+                    case 72:
+                    case 104:
+                        document.getElementById(currentnotes[5]).onmouseup();
+                        return false;
+                        break;
+                    case 74:
+                    case 106:
+                        document.getElementById(currentnotes[6]).onmouseup();
+                        return false;
+                        break;
+                    case 90:
+                    case 122:
+                        document.getElementById(currentnotes[7]).onmouseup();
+                        return false;
+                        break;
+                    case 69:
+                    case 101:
+                        document.getElementById(currentnotes[8]).onmouseup();
+                        return false;
+                        break;
+                    case 84:
+                        document.getElementById(currentnotes[9]).onmouseup();
+                        return false;
+                        break;
+                    case 89:
+                    case 121:
+                        document.getElementById(currentnotes[10]).onmouseup();
+                        return false;
+                        break;
+                    case 85:
+                    case 117:
+                        document.getElementById(currentnotes[11]).onmouseup();
+                        return false;
+                        break;
+                }
+                return true;
+            }
+        </script>        
+    </body>
+</html>

@@ -69,3 +69,28 @@ div#boutons .boutons:hover{
 div#boutons .boutons:active{
     box-shadow: -1px 2px 10px 3px rgba(0, 0, 0, 0.3) inset;
 }
+
+div#choicebutton{
+    text-align: center;
+    margin-top: 45vh;
+}
+
+div#choicebutton .boutons{
+    padding:6px 0 6px 0;
+	font:bold 13px Arial;
+	background:rgb(92, 92, 92);
+	color:#fff;
+	border-radius:2px;
+    width:150px;
+    height: 30px;
+    border:none;
+    outline: 0;
+}
+
+div#choicebutton .boutons:hover{
+    background-color:rgb(65, 65, 65);
+}
+
+div#choicebutton .boutons:active{
+    box-shadow: -1px 2px 10px 3px rgba(0, 0, 0, 0.3) inset;
+}
