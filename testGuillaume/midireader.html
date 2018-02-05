@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" onkeydown="return searchKeyDown(event)" onkeyup="return searchKeyUp(event)">
+<html lang="fr">
     <head>
         <meta charset="UTF-8"> 
         <title>Maestro Piano</title>   
@@ -12,6 +12,7 @@
             <svg height="70px" width="100%">
                 <g>
                     <rect fill="#6184a3" width="100%" height="100%"></rect>
+                    <rect fill="#4B4B4B" width="185px" height="5px" transform="translate(110, 65)"></rect>
                 </g>
             </svg>
             <a class="logomenu" href="../testGuillaume/index.html">
@@ -20,6 +21,107 @@
             <a class="logomenu1" href="../testGuillaume/midireader.html">Lecteur Fichier Midi</a>
             <a class="logomenu2" href="../testGuillaume/piano.html">Piano</a>
         </div>
-        
+        <div id="pianosvg">
+            <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+            <svg width="90%" viewBox="0 0 2240 400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <title>Piano Keyboard</title>
+                <defs></defs>
+                    <g id="piano-keyboard">
+                        <g id="octave-1">
+                            <rect id="C1" class="piano-key white-key" data-piano-key="C" stroke="#555555" fill="#FFFFF7" x="0" y="0" width="80" height="400" onmousedown="musicmaestro(this,'nd')" onmouseup="changecolor(this,'nd')"></rect>
+                            <rect id="D1" class="piano-key white-key" data-piano-key="D" stroke="#555555" fill="#FFFFF7" x="80" y="0" width="80" height="400" onmousedown="musicmaestro(this,'nd')" onmouseup="changecolor(this,'nd')"></rect>
+                            <rect id="E1" class="piano-key white-key" data-piano-key="E" stroke="#555555" fill="#FFFFF7" x="160" y="0" width="80" height="400" onmousedown="musicmaestro(this,'nd')" onmouseup="changecolor(this,'nd')"></rect>
+                            <rect id="F1" class="piano-key white-key" data-piano-key="F" stroke="#555555" fill="#FFFFF7" x="240" y="0" width="80" height="400" onmousedown="musicmaestro(this,'nd')" onmouseup="changecolor(this,'nd')"></rect>
+                            <rect id="G1" class="piano-key white-key" data-piano-key="G" stroke="#555555" fill="#FFFFF7" x="320" y="0" width="80" height="400" onmousedown="musicmaestro(this,'nd')" onmouseup="changecolor(this,'nd')"></rect>
+                            <rect id="A1" class="piano-key white-key" data-piano-key="A" stroke="#555555" fill="#FFFFF7" x="400" y="0" width="80" height="400" onmousedown="musicmaestro(this,'nd')" onmouseup="changecolor(this,'nd')"></rect>
+                            <rect id="B1" class="piano-key white-key" data-piano-key="B" stroke="#555555" fill="#FFFFF7" x="480" y="0" width="80" height="400" onmousedown="musicmaestro(this,'nd')" onmouseup="changecolor(this,'nd')"></rect>
+                            <rect id="Cd1" class="piano-key black-key" data-piano-key="C#" stroke="#979797" fill="#4B4B4B" x="60" y="0" width="40" height="280" onmousedown="musicmaestro(this,'d')" onmouseup="changecolor(this,'d')"></rect>
+                            <rect id="Dd1" class="piano-key black-key" data-piano-key="D#" stroke="#979797" fill="#4B4B4B" x="140" y="0" width="40" height="280" onmousedown="musicmaestro(this,'d')" onmouseup="changecolor(this,'d')"></rect>
+                            <rect id="Fd1" class="piano-key black-key" data-piano-key="F#" stroke="#979797" fill="#4B4B4B" x="300" y="0" width="40" height="280" onmousedown="musicmaestro(this,'d')" onmouseup="changecolor(this,'d')"></rect>
+                            <rect id="Gd1" class="piano-key black-key" data-piano-key="G#" stroke="#979797" fill="#4B4B4B" x="380" y="0" width="40" height="280" onmousedown="musicmaestro(this,'d')" onmouseup="changecolor(this,'d')"></rect>
+                            <rect id="Ad1" class="piano-key black-key" data-piano-key="A#" stroke="#979797" fill="#4B4B4B" x="460" y="0" width="40" height="280" onmousedown="musicmaestro(this,'d')" onmouseup="changecolor(this,'d')"></rect>
+                        </g>
+                        <g id="octave-2" transform="translate(560.000000, 0.000000)">
+                            <rect id="C2" class="piano-key white-key" data-piano-key="C" stroke="#555555" fill="#FFFFF7" x="0" y="0" width="80" height="400" onmousedown="musicmaestro(this,'nd')" onmouseup="changecolor(this,'nd')"></rect>
+                            <rect id="D2" class="piano-key white-key" data-piano-key="D" stroke="#555555" fill="#FFFFF7" x="80" y="0" width="80" height="400" onmousedown="musicmaestro(this,'nd')" onmouseup="changecolor(this,'nd')"></rect>
+                            <rect id="E2" class="piano-key white-key" data-piano-key="E" stroke="#555555" fill="#FFFFF7" x="160" y="0" width="80" height="400" onmousedown="musicmaestro(this,'nd')" onmouseup="changecolor(this,'nd')"></rect>
+                            <rect id="F2" class="piano-key white-key" data-piano-key="F" stroke="#555555" fill="#FFFFF7" x="240" y="0" width="80" height="400" onmousedown="musicmaestro(this,'nd')" onmouseup="changecolor(this,'nd')"></rect>
+                            <rect id="G2" class="piano-key white-key" data-piano-key="G" stroke="#555555" fill="#FFFFF7" x="320" y="0" width="80" height="400" onmousedown="musicmaestro(this,'nd')" onmouseup="changecolor(this,'nd')"></rect>
+                            <rect id="A2" class="piano-key white-key" data-piano-key="A" stroke="#555555" fill="#FFFFF7" x="400" y="0" width="80" height="400" onmousedown="musicmaestro(this,'nd')" onmouseup="changecolor(this,'nd')"></rect>
+                            <rect id="B2" class="piano-key white-key" data-piano-key="B" stroke="#555555" fill="#FFFFF7" x="480" y="0" width="80" height="400" onmousedown="musicmaestro(this,'nd')" onmouseup="changecolor(this,'nd')"></rect>
+                            <rect id="Cd2" class="piano-key black-key" data-piano-key="C#" stroke="#979797" fill="#4B4B4B" x="60" y="0" width="40" height="280" onmousedown="musicmaestro(this,'d')" onmouseup="changecolor(this,'d')"></rect>
+                            <rect id="Dd2" class="piano-key black-key" data-piano-key="D#" stroke="#979797" fill="#4B4B4B" x="140" y="0" width="40" height="280" onmousedown="musicmaestro(this,'d')" onmouseup="changecolor(this,'d')"></rect>
+                            <rect id="Fd2" class="piano-key black-key" data-piano-key="F#" stroke="#979797" fill="#4B4B4B" x="300" y="0" width="40" height="280" onmousedown="musicmaestro(this,'d')" onmouseup="changecolor(this,'d')"></rect>
+                            <rect id="Gd2" class="piano-key black-key" data-piano-key="G#" stroke="#979797" fill="#4B4B4B" x="380" y="0" width="40" height="280" onmousedown="musicmaestro(this,'d')" onmouseup="changecolor(this,'d')"></rect>
+                            <rect id="Ad2" class="piano-key black-key" data-piano-key="A#" stroke="#979797" fill="#4B4B4B" x="460" y="0" width="40" height="280" onmousedown="musicmaestro(this,'d')" onmouseup="changecolor(this,'d')"></rect>
+                        </g>
+                        <g id="octave-3" transform="translate(1120.000000, 0.000000)">
+                            <rect id="C3" class="piano-key white-key" data-piano-key="C" stroke="#555555" fill="#FFFFF7" x="0" y="0" width="80" height="400" onmousedown="musicmaestro(this,'nd')" onmouseup="changecolor(this,'nd')"></rect>
+                            <rect id="D3" class="piano-key white-key" data-piano-key="D" stroke="#555555" fill="#FFFFF7" x="80" y="0" width="80" height="400" onmousedown="musicmaestro(this,'nd')" onmouseup="changecolor(this,'nd')"></rect>
+                            <rect id="E3" class="piano-key white-key" data-piano-key="E" stroke="#555555" fill="#FFFFF7" x="160" y="0" width="80" height="400" onmousedown="musicmaestro(this,'nd')" onmouseup="changecolor(this,'nd')"></rect>
+                            <rect id="F3" class="piano-key white-key" data-piano-key="F" stroke="#555555" fill="#FFFFF7" x="240" y="0" width="80" height="400" onmousedown="musicmaestro(this,'nd')" onmouseup="changecolor(this,'nd')"></rect>
+                            <rect id="G3" class="piano-key white-key" data-piano-key="G" stroke="#555555" fill="#FFFFF7" x="320" y="0" width="80" height="400" onmousedown="musicmaestro(this,'nd')" onmouseup="changecolor(this,'nd')"></rect>
+                            <rect id="A3" class="piano-key white-key" data-piano-key="A" stroke="#555555" fill="#FFFFF7" x="400" y="0" width="80" height="400" onmousedown="musicmaestro(this,'nd')" onmouseup="changecolor(this,'nd')"></rect>
+                            <rect id="B3" class="piano-key white-key" data-piano-key="B" stroke="#555555" fill="#FFFFF7" x="480" y="0" width="80" height="400" onmousedown="musicmaestro(this,'nd')" onmouseup="changecolor(this,'nd')"></rect>
+                            <rect id="Cd3" class="piano-key black-key" data-piano-key="C#" stroke="#979797" fill="#4B4B4B" x="60" y="0" width="40" height="280" onmousedown="musicmaestro(this,'d')" onmouseup="changecolor(this,'d')"></rect>
+                            <rect id="Dd3" class="piano-key black-key" data-piano-key="D#" stroke="#979797" fill="#4B4B4B" x="140" y="0" width="40" height="280" onmousedown="musicmaestro(this,'d')" onmouseup="changecolor(this,'d')"></rect>
+                            <rect id="Fd3" class="piano-key black-key" data-piano-key="F#" stroke="#979797" fill="#4B4B4B" x="300" y="0" width="40" height="280" onmousedown="musicmaestro(this,'d')" onmouseup="changecolor(this,'d')"></rect>
+                            <rect id="Gd3" class="piano-key black-key" data-piano-key="G#" stroke="#979797" fill="#4B4B4B" x="380" y="0" width="40" height="280" onmousedown="musicmaestro(this,'d')" onmouseup="changecolor(this,'d')"></rect>
+                            <rect id="Ad3" class="piano-key black-key" data-piano-key="A#" stroke="#979797" fill="#4B4B4B" x="460" y="0" width="40" height="280" onmousedown="musicmaestro(this,'d')" onmouseup="changecolor(this,'d')"></rect>
+                        </g>
+                        <g id="octave-4" transform="translate(1680.000000, 0.000000)">
+                            <rect id="C4" class="piano-key white-key" data-piano-key="C" stroke="#555555" fill="#FFFFF7" x="0" y="0" width="80" height="400" onmousedown="musicmaestro(this,'nd')" onmouseup="changecolor(this,'nd')"></rect>
+                            <rect id="D4" class="piano-key white-key" data-piano-key="D" stroke="#555555" fill="#FFFFF7" x="80" y="0" width="80" height="400" onmousedown="musicmaestro(this,'nd')" onmouseup="changecolor(this,'nd')"></rect>
+                            <rect id="E4" class="piano-key white-key" data-piano-key="E" stroke="#555555" fill="#FFFFF7" x="160" y="0" width="80" height="400" onmousedown="musicmaestro(this,'nd')" onmouseup="changecolor(this,'nd')"></rect>
+                            <rect id="F4" class="piano-key white-key" data-piano-key="F" stroke="#555555" fill="#FFFFF7" x="240" y="0" width="80" height="400" onmousedown="musicmaestro(this,'nd')" onmouseup="changecolor(this,'nd')"></rect>
+                            <rect id="G4" class="piano-key white-key" data-piano-key="G" stroke="#555555" fill="#FFFFF7" x="320" y="0" width="80" height="400" onmousedown="musicmaestro(this,'nd')" onmouseup="changecolor(this,'nd')"></rect>
+                            <rect id="A4" class="piano-key white-key" data-piano-key="A" stroke="#555555" fill="#FFFFF7" x="400" y="0" width="80" height="400" onmousedown="musicmaestro(this,'nd')" onmouseup="changecolor(this,'nd')"></rect>
+                            <rect id="B4" class="piano-key white-key" data-piano-key="B" stroke="#555555" fill="#FFFFF7" x="480" y="0" width="80" height="400" onmousedown="musicmaestro(this,'nd')" onmouseup="changecolor(this,'nd')"></rect>
+                            <rect id="Cd4" class="piano-key black-key" data-piano-key="C#" stroke="#979797" fill="#4B4B4B" x="60" y="0" width="40" height="280" onmousedown="musicmaestro(this,'d')" onmouseup="changecolor(this,'d')"></rect>
+                            <rect id="Dd4" class="piano-key black-key" data-piano-key="D#" stroke="#979797" fill="#4B4B4B" x="140" y="0" width="40" height="280" onmousedown="musicmaestro(this,'d')" onmouseup="changecolor(this,'d')"></rect>
+                            <rect id="Fd4" class="piano-key black-key" data-piano-key="F#" stroke="#979797" fill="#4B4B4B" x="300" y="0" width="40" height="280" onmousedown="musicmaestro(this,'d')" onmouseup="changecolor(this,'d')"></rect>
+                            <rect id="Gd4" class="piano-key black-key" data-piano-key="G#" stroke="#979797" fill="#4B4B4B" x="380" y="0" width="40" height="280" onmousedown="musicmaestro(this,'d')" onmouseup="changecolor(this,'d')"></rect>
+                            <rect id="Ad4" class="piano-key black-key" data-piano-key="A#" stroke="#979797" fill="#4B4B4B" x="460" y="0" width="40" height="280" onmousedown="musicmaestro(this,'d')" onmouseup="changecolor(this,'d')"></rect>
+                        </g>
+                    </g>                    
+            </svg>            
+        </div>
+        <div id="volume">
+            <input class="slider" id="vol-control" type="range" min="0" max="100" value="50" step="1" oninput="SetVolume(this.value)"></input>
+        </div>
     </body>
+
+    <script type="text/javascript" src="../howler.js-master/dist/howler.js"></script>
+    <script>
+        var volumevalue=0.5;
+
+        function SetVolume(value){                                
+            volumevalue = value / 100;                
+        }
+
+        function musicmaestro(elem,valuediese) {
+            var soundname="../testGuillaume/sons/".concat(elem.id,".mp3");
+            var sound = new Howl({                    
+                src: [soundname]
+              });
+              if(valuediese=='d'){
+                document.getElementById(elem.id).setAttribute("fill","#2d2d2d");
+              } 
+              if(valuediese=='nd'){
+                document.getElementById(elem.id).setAttribute("fill","#e8e8da"); 
+              }  
+            Howler.volume(volumevalue);
+            sound.play();             
+        }
+    
+        function changecolor(elem,valuediese)
+        {
+            if(valuediese=='d'){
+                document.getElementById(elem.id).setAttribute("fill","#4B4B4B"); 
+              } 
+              if(valuediese=='nd'){
+                document.getElementById(elem.id).setAttribute("fill","#FFFFF7"); 
+              }
+        }
+    </script>
 </html>
