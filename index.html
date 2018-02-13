@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Maestro Piano</title>
+        <link rel="stylesheet" type="text/css" href="style/style.css">
+        <link rel="icon" type="image/ico" href="resources/piano.ico" />
+
+    </head>
+    <body class="body">
+        <div id="fixe">
+            <svg height="70px" width="100%">
+                <g>
+                    <rect fill="#6184a3" width="100%" height="100%"></rect>
+                </g>
+            </svg>
+            <a class="logomenu" href="#">
+                <img src="resources/piano.ico">
+            </a>
+            <a class="logomenu1" href="pages/midireader.html">Lecteur Fichier Midi</a>
+            <a class="logomenu2" href="pages/piano.html">Piano</a>
+        </div>
+        <div id="summary">
+            Bienvenue sur le projet Maestro Piano. Ce projet a été réalisé dans le cadre du cours d'HTML5 d'EI5
+            dispensé par Monsieur M. LHOMMEAU.
+            <br /><br />Nous vous proposons donc 2 parties dans ce projet, la première
+            étant un lecteur de fichiers au format midi, plusieurs fichiers vous sont proposés et les notes
+            s'afficheront sur le clavier de piano représenté à l'écran en même temps qu'elles seront jouées.
+            <br /><br />La deuxième partie de ce projet est un clavier de piano sur lequel on peut jouer, soit avec la souris,
+            soit avec le clavier de votre ordinateur.
+            <br /><br />Sans plus tarder nous vous proposons de tester l'une des deux fonctionnalités en choisissant ci-dessous:
+
+        </div>
+        <div id="choicebutton">
+            <input type="button" class="boutons" onclick="window.location.href='pages/midireader.html'" value="Lecteur Fichier Midi"/>
+            <input type="button" class="boutons" onclick="window.location.href='pages/piano.html'" value="Piano"/>
+        </div>
+    </body>
+</html>
