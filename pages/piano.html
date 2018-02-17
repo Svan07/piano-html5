@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" onkeydown="return searchKeyDown(event)" onkeyup="return searchKeyUp(event)">
     <head>
         <meta charset="UTF-8">
         <title>Maestro Piano</title>
@@ -28,7 +28,7 @@
                     <g id="piano-keyboard">
                         <g id="octave-1">
                             <rect id="C1" class="piano-key white-key" data-piano-key="C" stroke="#555555" fill="#FFFFF7" x="0" y="0" width="80" height="400" onmousedown="musicmaestro(this,'nd')" onmouseup="changecolor(this,'nd')"></rect>
-                            <rect id="D1" class="piano-key white-key" data-piano-key="D" stroke="#555555" fill="#FFFFF7" x="80" y="0" width="80" height="400" onmousedown="musicmaestro(this,'nd')" onmouseup="changecolor(this,'nd')"></rect>
+                            <rect id="D1" class="piano-key whitek-key" data-piano-key="D" stroke="#555555" fill="#FFFFF7" x="80" y="0" width="80" height="400" onmousedown="musicmaestro(this,'nd')" onmouseup="changecolor(this,'nd')"></rect>
                             <rect id="E1" class="piano-key white-key" data-piano-key="E" stroke="#555555" fill="#FFFFF7" x="160" y="0" width="80" height="400" onmousedown="musicmaestro(this,'nd')" onmouseup="changecolor(this,'nd')"></rect>
                             <rect id="F1" class="piano-key white-key" data-piano-key="F" stroke="#555555" fill="#FFFFF7" x="240" y="0" width="80" height="400" onmousedown="musicmaestro(this,'nd')" onmouseup="changecolor(this,'nd')"></rect>
                             <rect id="G1" class="piano-key white-key" data-piano-key="G" stroke="#555555" fill="#FFFFF7" x="320" y="0" width="80" height="400" onmousedown="musicmaestro(this,'nd')" onmouseup="changecolor(this,'nd')"></rect>
@@ -96,7 +96,7 @@
                 <input class="slider" id="vol-control" type="range" min="0" max="100" value="50" step="1" oninput="SetVolume(this.value)"></input>
         </div>
 
-        <script type="text/javascript" src="../howler.js-master/dist/howler.min.js"></script>
+        <script type="text/javascript" src="../howler.js-master/dist/howler.js"></script>
         <script type="text/javascript" src="../js/app.js"></script>
     </body>
 </html>
