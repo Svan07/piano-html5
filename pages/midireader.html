@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" onkeydown="return searchKeyDown(event)" onkeyup="return searchKeyUp(event)">
+<html lang="fr">
     <head>
         <meta charset="UTF-8">
         <title>Maestro Piano</title>
@@ -20,7 +20,10 @@
             <a class="logomenu1" href="../pages/midireader.html">Lecteur Fichier Midi</a>
             <a class="logomenu2" href="../pages/piano.html">Piano</a>
         </div>
-        <div id="pianosvg">
+        <div id="inputfile">
+            <input type="file">
+        </div>
+        <div id="pianosvgmidi">
             <?xml version="1.0" encoding="UTF-8" standalone="no"?>
             <svg width="90%" viewBox="0 0 2240 400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <title>Piano Keyboard</title>
@@ -84,6 +87,14 @@
                         </g>
                     </g>
             </svg>
+        </div>
+        <div id="progressbar" style="border:1px solid #ccc;margin-bottom:12px;background:#f7f7f7;">
+            <div id="play-bar" style="height: 20px; background: rgb(74, 136, 173); width: 6%;"></div>
+        </div>
+        <div id="boutons">
+            <button class="boutons" >Play</button>
+            <button class="boutons" >Pause</button>
+            <button class="boutons" >Stop</button>
         </div>
         <div id="volume">
             <input class="slider" id="vol-control" type="range" min="0" max="100" value="50" step="1" oninput="SetVolume(this.value)"></input>

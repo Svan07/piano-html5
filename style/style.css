@@ -2,6 +2,10 @@ div#pianosvg {
     text-align : center;
     margin-top: 8%;
 }
+div#pianosvgmidi {
+    text-align : center;
+    margin-top: 3%;
+}
 div#volume{
     position: fixed;
     top: 90%;
@@ -153,3 +157,13 @@ div#summary {
     font:18px fantasy;
     color: #4B4B4B;
 }
+ div#inputfile{
+     margin-top: 3%;
+     margin-left: 5vh;
+ }
+
+ div#progressbar{
+    margin-top: 2%;
+    margin-left: 10%;
+    margin-right: 10%;
+ }
